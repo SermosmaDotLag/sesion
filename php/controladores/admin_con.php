@@ -1,8 +1,8 @@
 <?php
-require_once 'php/modelos/UserModel.php';
+require_once 'php/modelos/admin_mod.php';
 
-class AdminController {
-
+class Admin_con {
+    public $vista = "login";
     public function __construct() {
         // Puedes inicializar cosas aquí si es necesario
     }
@@ -31,7 +31,7 @@ class AdminController {
             exit();
         } else {
             // Usuario no autenticado, redirigir al formulario de inicio de sesión con un mensaje de error
-            header('Location: login.php?error=Usuario o contraseña incorrectos');
+            header('Location: php/vistas/login.php?error=Usuario o contraseña incorrectos');
             exit();
         }
     }

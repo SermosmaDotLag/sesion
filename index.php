@@ -2,7 +2,7 @@
 require_once 'php/config/configdb.php';
 
 define("METODO_DEFAULT", "vista");
-define("CONTROLADOR_DEFAULT", "AdminController");
+define("CONTROLADOR_DEFAULT", "admin_con");
 
 $mensaje = "";
 
@@ -36,17 +36,11 @@ $controlador = new $nombreClase();
 /* Ver si el método está definido */
 $datosVista["datos"] = array();
 if (method_exists($controlador, $nombreMetodo)) {
-    if($nombreMetodo == "ajaxNivel" || $nombreMetodo == "ajaxMensajesNivel" || $nombreMetodo == "ajaxAnadirPartida" || $nombreMetodo == "ajaxPartida" || $nombreMetodo == "ajaxBasura" || $nombreMetodo == "ajaxPowerup"){
-        echo $controlador->{$nombreMetodo}();
-        return;
-    } else {
         $datosVista["datos"] = $controlador->{$nombreMetodo}();
-    }
 }
    
 /* Cargar vistas */
 require_once 'php/vistas/templates/header.php';
-require_once 'php/vistas/templates/login.php';
 
 require_once 'php/vistas/'.$controlador->vista.'.php';
 require_once 'php/vistas/templates/footer.php';

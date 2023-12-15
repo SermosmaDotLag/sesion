@@ -20,11 +20,7 @@
         <!-- <link rel="stylesheet" href="css/menu.css"> -->
         <link rel="icon" href="../img/logo_fondo_transparente.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php echo $controlador->pagina ?></title>
+        <title>Inicio de sesion</title>
     </head>
     <body>
-    <header>
-        <img src="../img/logo_fondo_transparente.png" alt="Logo de la aplicación"><br>
-        <!-- <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label> -->
-    </header>
+    
